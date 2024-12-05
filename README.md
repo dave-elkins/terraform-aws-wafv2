@@ -1,5 +1,35 @@
-# terraform-aws-wafv2
-A terraform module for AWS WAF V2
+# AWS WAFv2 Terraform Module
+A terraform module for AWS WAFv2
+
+Terraform module which creates WAFv2 resources on AWS.
+
+## Usage
+
+```hcl
+module "vpc" {
+  source = "github.com/dave-elkins/terraform-aws-wafv2"
+
+  name = "my-web-acl"
+  scope = "REGIONAL"
+  s3_bucket_id = "a-bucket-for-logging"
+
+  tags = {
+    Terraform = "true"
+    Environment = "dev"
+  }
+}
+```
+
+## Examples
+
+- [Complete](https://github.com/dave-elkins/terraform-aws-wafv2/tree/main/examples/complete)
+
+
+## Contributing
+
+Report issues/questions/feature requests on in the [issues](https://github.com/dave-elkins/terraform-aws-wafv2/issues/new) section.
+
+Full contributing [guidelines are covered here](.github/contributing.md).
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

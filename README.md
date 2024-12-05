@@ -6,7 +6,7 @@ Terraform module which creates WAFv2 resources on AWS.
 ## Usage
 
 ```hcl
-module "vpc" {
+module "waf" {
   source = "github.com/dave-elkins/terraform-aws-wafv2"
 
   name = "my-web-acl"
